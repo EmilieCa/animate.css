@@ -1,0 +1,48 @@
+@use 'mixins';
+
+header {
+    grid-area: 1 / 1 / 2 / 13 ;
+    background: linear-gradient(to bottom right, #563f55, #c74f59);
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 7rem;
+        align-self: flex-end;
+        color: #3f293e;
+        padding: 0 50px 30px 0;
+    }
+    
+    h2 {
+        font-size:4rem;
+        color: #df6a74;
+        padding: 30px 0 0 50px;
+    }
+
+    .slideInLeft {
+        animation-name: slideInLeft;
+        animation-duration: 2s;
+    }
+
+    .slideInRight {
+        animation-name: slideInRight;
+        animation-duration: 2s;
+    }
+
+    img {
+        height: auto;
+        width: 80%;
+        max-width: 1200px;
+        align-self: center;
+    }
+    
+    @include mixins.breakpoint(tablet-plus) {
+        img {
+            width: 50%;
+        }
+    }
+}
+
+

@@ -1,0 +1,303 @@
+html {
+  font-size: 100%;
+}
+html body {
+  background-color: #f0a5ab;
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+html body .visible {
+  visibility: visible;
+}
+html body figure {
+  box-shadow: -2px 2px rgba(0, 0, 0, 0.3);
+}
+html body figure img {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  html {
+    font-size: 110%;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 125%;
+  }
+}
+
+header {
+  grid-area: 1/1/2/13;
+  background: linear-gradient(to bottom right, #563f55, #c74f59);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 7rem;
+  align-self: flex-end;
+  color: #3f293e;
+  padding: 0 50px 30px 0;
+}
+header h2 {
+  font-size: 4rem;
+  color: #df6a74;
+  padding: 30px 0 0 50px;
+}
+header .slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 2s;
+}
+header .slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 2s;
+}
+header img {
+  height: auto;
+  width: 80%;
+  max-width: 1200px;
+  align-self: center;
+}
+@media (min-width: 800px) {
+  header img {
+    width: 50%;
+  }
+}
+
+main {
+  grid-area: 2/1/3/13;
+  background-color: #f0a5ab;
+}
+main article {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, auto);
+  justify-items: center;
+  align-items: center;
+}
+main article .sous-entete {
+  grid-area: 1/1/3/13;
+  color: #3f293e;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+main article .sous-entete h2 {
+  justify-self: start;
+  font-size: 1.3rem;
+}
+main article .sous-entete p {
+  margin-top: 20px;
+}
+main article .sous-entete canvas {
+  background-color: #f8f8f8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #563f55;
+  margin: 15px 0;
+  align-self: flex-end;
+  align-content: center;
+  animation-name: bounceInDown;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+main article section, main article aside {
+  margin: 25px auto;
+}
+main article section h3, main article aside h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+main article section .bounceIn, main article aside .bounceIn {
+  animation-name: bounceIn;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+main article section h4, main article aside h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+main article section h3, main article section h4, main article aside h3, main article aside h4 {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  main article aside {
+    margin-right: 10px;
+  }
+}
+main article .box-office {
+  grid-area: 3/1/4/13;
+}
+main article .box-office h3 {
+  margin-bottom: 5px;
+}
+main article .box-office h4 {
+  margin-top: 25px;
+}
+main article .box-office .box-office-graphic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+main article .box-office .rubberBand {
+  animation-name: rubberBand;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+main article .box-office .carousel-item img {
+  width: 100%;
+}
+main article .box-office .carousel-item p {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  main article .box-office {
+    grid-area: 3/6/5/12;
+  }
+}
+main article .noms-populaires {
+  grid-area: 4/1/6/13;
+}
+main article .noms-populaires table {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  main article .noms-populaires {
+    grid-area: 5/6/9/13;
+  }
+}
+main article .backInRight {
+  animation-name: backInRight;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+main article .backInRight .heartBeat {
+  animation-name: heartBeat;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+main article .faits-marquants {
+  grid-area: 6/1/9/13;
+}
+main article .faits-marquants figure {
+  width: 60%;
+  margin: 20px auto;
+  animation-name: bounceIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+main article .faits-marquants figure .flipInX {
+  animation-name: flipInX;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+main article .faits-marquants figure img {
+  border: 1px solid #080808;
+}
+main article .faits-marquants figure figcaption {
+  margin-top: 10px;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  main article .faits-marquants figure {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  main article .faits-marquants {
+    grid-area: 3/2/13/6;
+  }
+  main article .faits-marquants figure {
+    width: 70%;
+  }
+}
+main article .mode {
+  grid-area: 9/1/13/13;
+}
+main article .mode figure {
+  width: 75%;
+  margin: 50px auto;
+}
+main article .mode figure .fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+main article .mode figure img {
+  border: 1px solid #080808;
+}
+main article .mode figure figcaption {
+  margin-top: 10px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  main article .mode {
+    grid-area: 9/6/13/13;
+  }
+  main article .mode figure {
+    width: 70%;
+    margin: 60px auto;
+  }
+}
+
+footer {
+  background-color: #563f55;
+  color: #f8f8f8;
+  grid-area: 3/1/4/13;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+footer img {
+  display: none;
+}
+footer div {
+  grid-area: 1/1/13/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 30px;
+}
+footer div a {
+  margin: 15px 0;
+  font-size: 1.3rem;
+  color: #f0a5ab;
+}
+footer div a:hover, footer div afocus {
+  color: #FFCC00;
+}
+footer div .tada {
+  animation-name: tada;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+@media (min-width: 800px) {
+  footer img {
+    display: block;
+    margin: 30px;
+    width: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  footer img {
+    width: 300px;
+  }
+}
+
+html, body, header, main, section, footer, h1, h2, h3, h4, h5, div, figure, img, figcaption, table, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

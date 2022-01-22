@@ -1,0 +1,52 @@
+@use 'mixins';
+
+footer {
+    background-color:#563f55;
+    color: #f8f8f8;
+    grid-area: 3 / 1 / 4 / 13 ;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    
+    img {
+        display: none;
+    }
+    
+    div {
+        grid-area: 1 / 1 / 13 / 4 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 30px;
+
+        a {
+            margin: 15px 0;
+            font-size: 1.3rem;
+            color: #f0a5ab;;
+            &:hover, &focus {
+                color: #FFCC00;
+            }
+        }
+        .tada {
+            animation-name: tada;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+    
+    @include mixins.breakpoint(tablet-plus) {           
+        img {
+            display: block;
+            margin: 30px;
+            width: 150px;
+        }
+    }
+
+    @include mixins.breakpoint(desktop-plus) {           
+        img {
+            width: 300px;
+        }
+    }
+}

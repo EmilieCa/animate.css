@@ -1,0 +1,9 @@
+@use 'variables';
+
+@mixin breakpoint($width) {
+    @if $width == tablet-plus {
+        @media (min-width: 800px) {@content;}
+    } @else if $width == desktop-plus {
+        @media (min-width: 1024px) {@content;}
+    }
+}

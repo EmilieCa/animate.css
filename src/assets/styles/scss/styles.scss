@@ -1,0 +1,11 @@
+@import 'bases';
+@import 'header';
+@import 'main';
+@import 'footer';
+
+// RESET
+html, body, header, main, section, footer, h1, h2, h3, h4, h5, div, figure, img, figcaption, table, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

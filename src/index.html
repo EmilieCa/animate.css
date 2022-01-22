@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate.css</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./assets/styles/css/styles.css">
+</head>
+<body>
+    <header>
+        <h2 class="animate__animated slideInRight" data-animation="slideInRight">L'année</h2>
+        <img src="assets/img/entete.jpeg" alt="Portrait d'une femme des années 80, aux cheveux châtain clair et très volumineux. Elle porte également un maquillage prononcé; paupières mauves et lèvres rouge framboise. Des boucles d'oreilles noires, en forme de triangles, longent son coup.">
+        <h1 class="animate__animated slideInLeft" data-animation="slideInLeft"><time datetime="1982">1982</time></h1>
+    </header>
+    <main>
+        <article>
+            <div class="sous-entete">
+                <h2>L'année <time datetime="1982">1982</time> fut marquée par quelques trucs...</h2>
+                <p>Que ce soit pourt la musique, la mode, les films... Les <time datetime="1980"> années 80</time> demeurent gravées à tout jamais dans l'histoire. Mais la raison ultime est que... I, JE, YO, ÉMILIE CARON, suis née en <time datetime="1982">1982</time>.</p>
+                <canvas id="moncanvas" class="animate__animated animated" data-animation="bounceInDown"></canvas>
+            </div>
+            <section class="box-office">
+                <h3 class="animate__animated animated" data-animation="bounceIn">Top 5 du box-office</h3>
+                <div class="card m-3">
+                    <!-- CARROUSSEL -->
+                    <div class="row justify-content-center p-3 box-office-carousel">
+                        <div id="carousel-control" class="carousel slide col-6" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/tron.jpg" class="d-block w-100"  alt="Affiche du film Tron">
+                                    <p>Recettes&nbsp;: 29 759 462&nbsp;$</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/conan.jpg" class="d-block w-100"  alt="Affiche du film Conan, le Barbare">
+                                    <p>Recettes&nbsp;: 39 565 475&nbsp;$</p>
+                                </div>
+                                <div class="carousel-item">                     
+                                    <img src="assets/img/rambo.jpg" class="d-block w-100"  alt="Affiche du film Rambo">
+                                    <p>Recettes&nbsp;: 47 212 904&nbsp;$</p>
+                                </div>
+                                <div class="carousel-item">                     
+                                    <img src="assets/img/rocky.jpg" class="d-block w-100"  alt="Affiche du film Rocky 3">
+                                    <p>Recettes&nbsp;: 124 146 897&nbsp;$</p>
+                                </div>
+                                <div class="carousel-item">                     
+                                    <img src="assets/img/et.jpg" class="d-block w-100"  alt="Affiche du film E.T. l'extra-terrestre">
+                                    <p>Recettes&nbsp;: 314 911 094&nbsp;$</p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-control" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-control" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <h4 >(Canada et États-Unis en millions de dollars)</h4>
+                    <div class="box-office-graphic animate__animated animated" data-animation="rubberBand">
+                        <div id="films-chart-container"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="noms-populaires">
+                <h3 class="animate__animated animated" data-animation="bounceIn">Top 5 des noms les plus populaires au QC</h3>
+                <div class="card p-4 col-12">
+                    <table class="table animate__animated animated" data-animation="backInRight">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">FILLES</th>
+                            <th scope="col">GARÇONS</th>             
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Aurélie</td>
+                            <td>Nicolas</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Céline</td>
+                            <td>Julien</td>                     
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td class="animate__animated animated" data-animation="heartBeat">Émilie</td>
+                            <td>Sébastien</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Laetitia</td>
+                            <td>David</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Stéphanie</td>
+                            <td>Guillaume</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </section>
+            <aside class="faits-marquants">
+                <h3 class="animate__animated animated" data-animation="bounceIn">Quelques faits marquants durant l'année</h3>
+
+                <figure class="card p-3" >
+                    <h4 class="animate__animated animated" data-animation="flipInX">3 février</h4>
+                    <img src="assets/img/kodak.jpg" alt="Photo du premier appareil numérique fabriqué par la compagnie Kodak.">
+                    <figcaption>Kodak lance sur le marché le premier appareil-photo numérique</figcaption>
+                </figure>
+
+                <figure class="card p-3 animate__animated animated" data-animation="flipInX">
+                    <h4 class="animate__animated animated" data-animation="flipInX">6 août</h4>
+                    <img src="assets/img/wall.jpeg" alt="Affiche du film Pink Floyd, The Wall">
+                    <figcaption>Première américaine à New York de <span lang="en">"Pink Floyd - The Wall"</span> - un film basé sur l'album double <span lang="en">"The Wall"</span> </figcaption>
+                </figure>
+                <figure class="card p-3 animate__animated animated" data-animation="flipInX">
+                    <h4 class="animate__animated animated" data-animation="flipInX">17 août</h4>
+                    <img src="assets/img/cd.png" alt="Image d'un disque compacte">
+                    <figcaption>Invention du disque compacte «CD», mis au point par le fabricant néerlandais Philips</figcaption>
+                </figure>
+                <figure class="card p-3 animate__animated animated" data-animation="flipInX">
+                    <h4 class="animate__animated animated" data-animation="flipInX">19 septembre</h4>
+                    <img src="assets/img/smiley_face.png" alt="Image du tout premier Smiley Face">
+                    <figcaption>Première utilisation du Smiley «&nbsp;:-)&nbsp;» - par «Scott E. Fahlman» un professeur de l'Université Carnegie Mellon - il l'utilisa dans un message envoyé à un babillard électronique</figcaption>
+                </figure>
+                <figure class="card p-3 animate__animated animated" data-animation="flipInX">
+                    <h4 class="animate__animated animated" data-animation="flipInX">13 octobre</h4>
+                    <img src="assets/img/drapeau-patriotes.jpg" alt="Drapeau des Patriotes: fond ligné vert, blanc et rouge. Étoile jaune en haut à gauche et un Patriotes armé, au milieu.">
+                    <figcaption>Québec proclame le 23 novembre, Journée des Patriotes.</figcaption>
+                </figure>
+                <figure class="card p-3 animate__animated animated" data-animation="flipInX">
+                    <h4 class="animate__animated animated" data-animation="flipInX">26 décembre</h4>
+                    <img src="assets/img/time-1982-machine-of-the-year.jpg" alt="Image couverture du magazine Times, le 26 décembre 1982, dévoilant l'ordinateur homme de l'année. Une sculture d'un homme est assis devant un ordinateur.">
+                    <figcaption>Pour la première fois, l'homme de l'année sélectionné par le magazine «&nbsp;Time&nbsp;» n'est pas humain - un ordinateur est honoré en 1982 pour avoir la plus grande influence sur «&nbsp;le bien ou le mal à venir&nbsp;».</figcaption>
+                </figure>
+                <figure class="card p-3 animate__animated animated" data-animation="flipInX">
+                    <h4 class="animate__animated animated" data-animation="flipInX">29 décembre</h4>
+                    <img src="assets/img/timbre_bob_marley.jpg" alt="Portrait de Bob Marley sur un timbre.">
+                    <figcaption>La Jamaïque émet un timbre commémoratif de Bob Marley décédé en mai 1981.</figcaption>
+                </figure>
+            </aside>
+            <section class="mode">
+                <h3 class="animate__animated animated" data-animation="bounceIn">La mode</h3>
+                <figure class="card p-4">
+                  <img src="assets/img/mode_depeche-mode.jpg" alt="Photo prise en 1982, du groupe Dépêche mode, démontrant les allures un peu loufoque de l'époque." class="animate__animated animated" data-animation="fadeInRight">
+                    <figcaption>Cheveux crimpés, chapeau de grand-père, manteau de cuir ou habit carottés, tout ceci était bien à la mode, oui,oui.</figcaption>
+                </figure>
+                <figure class="card p-4">   
+                    <img src="assets/img/mode.jpg" alt="Image de pages de magasines illustrant une jolie demoiselle portant un habit one piece bleu cyan, des accessoires et bijoux magentas" class="animate__animated animated" data-animation="fadeInRight">
+                    <figcaption>Un beau cyan et magenta pour fêter le temps des fêtes!</figcaption>
+                </figure>
+                <figure class="card p-4">
+                    <img src="assets/img/mode_barbies.jpg" alt="Image de pages de magasines illustrants des figurines de la collection Barbie et Ken, portant des habits dites année 82." class="animate__animated animated" data-animation="fadeInRight">
+                    <figcaption>Même Barbie et Ken suivaient la mode.</figcaption>
+                </figure>
+            </section>
+        </article>
+    </main>
+    <footer>
+      <img src="assets/img/madonna.jpg" alt="Portait de Madonna, cheveux éminchés, chancail blanc, bretelles noires, tout ceci en suçant un souçon rouge." class="img-fluid">
+      <div>
+        <a href="#top" class="animate__animated animated" data-animation="bounceInUp">Retour en haut</a>
+        
+        <p>Présenté par Émilie Caron</p>
+        <p>pour le cours de PIIA</p>
+        <p class="animate__animated animated" data-animation="tada">enseigné par la merveilleuse Maude
+        </p>
+        <p><time datetime="2021-10-08">8 octobre 2021</time></p>
+    </div>
+        <img src="assets/img/michael.jpg" alt="Couverture de l'album Thriller de Michael Jackon. Celui-ci (étant toujours de couleur noire) est allongé de façon viril, portant une chemise noire et un complet blanc." class="img-fluid">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.js" integrity="sha512-dPZE9SLz1NVUX9tSX9TYOs2SyaJRBZC9ogOc/VasDFSFrxSDkXv3ZCdgkG8/AzHQ+YVklyqDgSS3aDgMradlNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/scripts/vanilla/librairies/rgraph/RGraph.svg.common.core.js"></script>
+    <script src="assets/scripts/vanilla/librairies/rgraph/RGraph.svg.bar.js"></script>
+    <script src="assets/scripts/vendors/main.js" type="module"></script>
+</body>
+</html>
