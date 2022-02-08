@@ -6,6 +6,7 @@ const babel = require('rollup-plugin-babel');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const del = require('del');
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('test', function(done) {
     console.log('allô');
@@ -50,3 +51,25 @@ gulp.task('watch', function() {
 
 gulp.task('dev', gulp.series('sass', gulp.parallel('browser-sync', 'watch')));
 
+gulp.task('build-styles', function () {
+    return gulp.src('src/assets/styles/css/**/*.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('dist/assets/styles/css'));
+});
+
+gulp.task('build-scripts', function() {
+    return gulp.src('src/assets/scripts/vendors/**/*')
+    .pipe(gulp.dest('dist/assets/scripts/vendors'));
+});
+
+gulp.task('build-img', function() {
+    return gulp.src('src/assets/img/**/*')
+    .pipe(gulp.dest('dist/assets/img'));
+});
+
+gulp.task('build-template', function() {
+    return gulp.src('src/**/*.html')
+    .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('build', gulp.series('build-styles', 'build-scripts', 'build-img', 'build-template'));
